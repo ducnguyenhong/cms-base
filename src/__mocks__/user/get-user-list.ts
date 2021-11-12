@@ -1,0 +1,81 @@
+import { Registry, Request } from 'miragejs';
+import { AnyFactories, AnyModels } from 'miragejs/-types';
+import Schema from 'miragejs/orm/schema';
+
+export const getUserList = (schema: Schema<Registry<AnyModels, AnyFactories>>, request: Request) => {
+  return {
+    ok: true,
+    code: 200,
+    data: [
+      {
+        id: 1,
+        fullname: 'Admin system',
+        username: 'admin',
+        phone: '0989871824',
+        email: 'user@gmail.com',
+        type: 'ADMIN',
+        avatar: null,
+        status: 'ACTIVE',
+        birthday: 1589871824,
+        created_at: 1589871824,
+        updated_at: null,
+      },
+      {
+        id: 2,
+        fullname: 'User Test',
+        username: 'usertest',
+        phone: '0989871824',
+        type: 'USER',
+        avatar: null,
+        birthday: 1589871824,
+        status: 'ACTIVE',
+        created_at: null,
+        updated_at: null,
+      },
+      {
+        id: 3,
+        fullname: 'Host local',
+        username: 'hostlocal',
+        phone: '0989871824',
+        type: 'HOST',
+        avatar: null,
+        birthday: 1589871824,
+        status: 'ACTIVE',
+        created_at: null,
+        updated_at: null,
+      },
+      {
+        id: 4,
+        fullname: 'Competitor Abcd',
+        username: 'competitor',
+        phone: '0989871824',
+        type: 'COMPETITOR',
+        avatar: null,
+        birthday: 1589871824,
+        status: 'ACTIVE',
+        created_at: null,
+        updated_at: null,
+      },
+      {
+        id: 5,
+        fullname: 'Editor 1234',
+        username: 'editor',
+        phone: '0989871824',
+        type: 'EDITOR',
+        avatar: null,
+        birthday: 1589871824,
+        status: 'ACTIVE',
+        created_at: null,
+        updated_at: null,
+      },
+    ],
+    pagination: {
+      page: 1,
+      limit: 10,
+      sort: '',
+      total: 10,
+      total_items: 10,
+      current: 10,
+    },
+  };
+};
